@@ -461,8 +461,8 @@
                 <p>
                     <center>
                     Based on the experimental results, we can deduce that a model trained on intricate real-world scenarios exhibits superior generalization.
-                    This stems from the fact that real-world models are frequently influenced by the surrounding environ
-                   ment, encompassing elements like fluctuating traffic patterns, dynamic electronic displays, and the
+                    This stems from the fact that real-world models are frequently influenced by the surrounding environment, 
+                    encompassing elements like fluctuating traffic patterns, dynamic electronic displays, and the
                     movement of trees in the wind. The model must discern the nuances of anomaly detection within a
                     dynamic environment and comprehend the dynamics of objects and/or performing subjects within it.
                     <b>VWC dataset provides a comprehensive representation of real-world scenarios.</b> 
@@ -471,98 +471,94 @@
             </td>
         </tr>
     </table>
-    <table align="center" width="720px">
-        <tr>
-            <td>
-                <h2><center>Generalizability and adaptability</center></h2>
-                <table align="center" border="1" cellpadding="5">
-                    <tr>
-                        <th>Test view</th>
-                        <th>Train</th>
-                        <th colspan="2">FSAD</th>
-                        <th>Train</th>
-                        <th colspan="2">FSAD</th>
-                        <th colspan="2">SA<sup>2</sup>D (ours)</th>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th>Micro</th>
-                        <th>Macro</th>
-                        <th></th>
-                        <th>Micro</th>
-                        <th>Macro</th>
-                        <th>Micro</th>
-                        <th>Macro</th>
-                    </tr>
-                    <tr>
-                        <td>ShT-v1</td>
-                        <td>ShT (7 views)</td>
-                        <td>61.36</td>
-                        <td>55.34</td>
-                        <td>MSAD</td>
-                        <td>63.74</td>
-                        <td>62.92</td>
-                        <td>68.96</td>
-                        <td>77.89</td>
-                    </tr>
-                    <tr>
-                        <td>ShT-v3</td>
-                        <td>ShT (7 views)</td>
-                        <td>26.51</td>
-                        <td>26.58</td>
-                        <td>MSAD</td>
-                        <td>64.39</td>
-                        <td>62.56</td>
-                        <td>67.59</td>
-                        <td>73.43</td>
-                    </tr>
-                    <tr>
-                        <td>ShT-v5</td>
-                        <td>ShT (7 views)</td>
-                        <td>53.40</td>
-                        <td>53.32</td>
-                        <td>MSAD</td>
-                        <td>55.04</td>
-                        <td>54.63</td>
-                        <td>55.74</td>
-                        <td>54.02</td>
-                    </tr>
-                    <tr>
-                        <td>ShT-v6</td>
-                        <td>ShT (7 views)</td>
-                        <td>78.36</td>
-                        <td>78.27</td>
-                        <td>MSAD</td>
-                        <td>70.26</td>
-                        <td>71.02</td>
-                        <td>75.47</td>
-                        <td>72.35</td>
-                    </tr>
-                    <tr>
-                        <td>ShT-v8</td>
-                        <td>ShT (7 views)</td>
-                        <td>50.02</td>
-                        <td>52.54</td>
-                        <td>MSAD</td>
-                        <td>59.97</td>
-                        <td>57.45</td>
-                        <td>60.85</td>
-                        <td>61.52</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td width="400px">
-                <center>
-                    <span style="font-size:14px"><i><b>Experimental results on single-scenario evaluations.</b> On ShanghaiTech (ShT), only 7
-                         views are used during training and the rest views are individually used for testing. The notation ShT-v∗ denotes the
-                         use of different camera views.</i></span>
-                </center>
-            </td>
-        </tr>
-    </table>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>SoilFormer Results (HTML)</title>
+<style>
+  :root { --fg:#111; --muted:#555; --bd:#222; --bg:#fff; }
+  body { font-family: "Times New Roman", Times, serif; color:var(--fg); background:var(--bg); margin:24px; }
+  .tbl { border-collapse: collapse; margin: 0 auto 28px; font-size: 14px; min-width: 680px; }
+  caption { caption-side: top; font-weight: 700; text-transform: uppercase; letter-spacing: .2px; margin-bottom: 6px; }
+  th, td { border: 1px solid var(--bd); padding: 6px 10px; text-align: center; }
+  th { background: #fafafa; }
+  .subhead { text-align:left; font-weight:700; background:#f5f5f5; }
+  .note { max-width: 780px; margin: 0 auto; font-size: 13px; color: var(--muted); }
+  .small { font-size: 12.5px; }
+  .nowrap { white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<!-- ================== TABLE I ================== -->
+<table class="tbl" aria-describedby="t1-note">
+  <caption>TABLE I — SoilFormer Result Comparison with Non-Pruned and LSTM Models: 5cm Depth, Lyons Farm</caption>
+  <thead>
+    <tr>
+      <th class="nowrap">Model</th>
+      <th>Dataset</th>
+      <th>MAE</th>
+      <th>RMSE</th>
+      <th>R<sup>2</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- LSTM -->
+    <tr><td class="subhead" colspan="5">LSTM</td></tr>
+    <tr><td></td><td>Train</td><td><!-- MAE --></td><td><!-- RMSE --></td><td><!-- R2 --></td></tr>
+    <tr><td></td><td>Validation</td><td><!-- MAE --></td><td><!-- RMSE --></td><td><!-- R2 --></td></tr>
+    <tr><td></td><td>Test</td><td><!-- MAE --></td><td><!-- RMSE --></td><td><!-- R2 --></td></tr>
+
+    <!-- SoilFormer (Non-Pruned) -->
+    <tr><td class="subhead" colspan="5">SoilFormer (Non-Pruned)</td></tr>
+    <tr><td></td><td>Train</td><td><!-- MAE --></td><td><!-- RMSE --></td><td><!-- R2 --></td></tr>
+    <tr><td></td><td>Validation</td><td><!-- MAE --></td><td><!-- RMSE --></td><td><!-- R2 --></td></tr>
+    <tr><td></td><td>Test</td><td><!-- MAE --></td><td><!-- RMSE --></td><td><!-- R2 --></td></tr>
+
+    <!-- SoilFormer (Pruned / Ours) -->
+    <tr><td class="subhead" colspan="5">SoilFormer (Pruned)</td></tr>
+    <tr><td></td><td>Train</td><td><!-- MAE --></td><td><!-- RMSE --></td><td><!-- R2 --></td></tr>
+    <tr><td></td><td>Validation</td><td><!-- MAE --></td><td><!-- RMSE --></td><td><!-- R2 --></td></tr>
+    <tr><td></td><td>Test</td><td><!-- MAE --></td><td><!-- RMSE --></td><td><!-- R2 --></td></tr>
+  </tbody>
+</table>
+<p id="t1-note" class="note small">
+  Results are reported at 5&nbsp;cm VWC depth. Replace the placeholders with updated scores.
+</p>
+
+<!-- ================== TABLE II ================== -->
+<table class="tbl" aria-describedby="t2-note">
+  <caption>TABLE II — K-Fold Validation of SoilFormer at 5cm Depth in Lyons Farm</caption>
+  <thead>
+    <tr>
+      <th>Fold</th>
+      <th>MAE</th>
+      <th>RMSE</th>
+      <th>R<sup>2</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Fold&nbsp;1</td><td><!-- MAE --></td><td><!-- RMSE --></td><td><!-- R2 --></td></tr>
+    <tr><td>Fold&nbsp;2</td><td><!-- MAE --></td><td><!-- RMSE --></td><td><!-- R2 --></td></tr>
+    <tr><td>Fold&nbsp;3</td><td><!-- MAE --></td><td><!-- RMSE --></td><td><!-- R2 --></td></tr>
+    <tr><td>Fold&nbsp;4</td><td><!-- MAE --></td><td><!-- RMSE --></td><td><!-- R2 --></td></tr>
+    <tr><td>Fold&nbsp;5</td><td><!-- MAE --></td><td><!-- RMSE --></td><td><!-- R2 --></td></tr>
+    <tr><td><strong>Average</strong></td><td><strong><!-- MAE --></strong></td><td><strong><!-- RMSE --></strong></td><td><strong><!-- R2 --></strong></td></tr>
+  </tbody>
+</table>
+<p id="t2-note" class="note small">
+  Five-fold cross-validation with per-fold scores and overall average.
+</p>
+
+</body>
+</html>
+
+    
     <table align="center" width="720px">
         <tr>
             <td>
