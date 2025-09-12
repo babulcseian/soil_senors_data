@@ -531,6 +531,50 @@
 
 
 
+
+
+    <table border="1" align="center" cellpadding="5">
+  <caption><b>TABLE — Model Efficiency and Performance Comparison</b></caption>
+  <tr>
+    <th rowspan="2">Model / Depth</th>
+    <th rowspan="2">Model Size (MB)</th>
+    <th rowspan="2">Training Time<br>(5 Epochs, sec)</th>
+    <th rowspan="2">Inference Time<br>(Batch 32, sec)</th>
+    <th colspan="3">Performance (MAE / RMSE / R<sup>2</sup>)</th>
+  </tr>
+  <tr>
+    <th>MAE</th>
+    <th>RMSE</th>
+    <th>R<sup>2</sup></th>
+  </tr>
+
+  <!-- Soil Former -->
+  <tr><td>Soil Former</td><td>0.97</td><td>36.51</td><td>0.1322</td><td>—</td><td>—</td><td>—</td></tr>
+  <tr><td>Soil Former (Stripped)</td><td>0.29</td><td>349.62</td><td>0.0115</td><td>—</td><td>—</td><td>—</td></tr>
+  <tr><td>Soil Former (Non-Pruned)</td><td>0.78</td><td>375.32</td><td>0.6215</td><td>—</td><td>—</td><td>—</td></tr>
+  <tr><td>LSTM</td><td>2.21</td><td>1122.5</td><td>1399.84</td><td>—</td><td>—</td><td>—</td></tr>
+
+  <!-- Performance with DATL -->
+  <tr><td>Soil Former (DATL, 10 cm)</td><td>—</td><td>—</td><td>—</td><td>0.0117</td><td>0.0252</td><td>0.9877</td></tr>
+  <tr><td>Soil Former (DATL, 20 cm)</td><td>—</td><td>—</td><td>—</td><td>0.0042</td><td>0.0061</td><td>0.9982</td></tr>
+  <tr><td>Soil Former (DATL, 30 cm)</td><td>—</td><td>—</td><td>—</td><td>0.0049</td><td>0.0068</td><td>0.9950</td></tr>
+  <tr><td>Soil Former (DATL, 50 cm)</td><td>—</td><td>—</td><td>—</td><td>0.0020</td><td>0.0031</td><td>0.9968</td></tr>
+
+  <!-- Performance baseline -->
+  <tr><td>Soil Former (Baseline, 10 cm)</td><td>—</td><td>—</td><td>—</td><td>0.0161</td><td>0.0272</td><td>0.9867</td></tr>
+  <tr><td>Soil Former (Baseline, 20 cm)</td><td>—</td><td>—</td><td>—</td><td>0.0058</td><td>0.0099</td><td>0.9947</td></tr>
+  <tr><td>Soil Former (Baseline, 30 cm)</td><td>—</td><td>—</td><td>—</td><td>0.0070</td><td>0.0094</td><td>0.9931</td></tr>
+  <tr><td>Soil Former (Baseline, 50 cm)</td><td>—</td><td>—</td><td>—</td><td>0.0040</td><td>0.0049</td><td>0.9947</td></tr>
+</table>
+
+
+
+
+    
+
+
+
+
     
     <br><br>
     <hr>
